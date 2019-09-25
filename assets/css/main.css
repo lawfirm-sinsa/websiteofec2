@@ -3068,3 +3068,9 @@
 	.rightMenu {
 		font-weight: bold;
 	}
+
+/* added by lawfirm-sinsa */
+
+	.container-fluid-login {
+		margin-top: 300px;
+	}
