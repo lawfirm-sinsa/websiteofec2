@@ -9,15 +9,19 @@
 		<title>로그인</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/lawfirmsinsa.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />		
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- google font -->
 	    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
-	        <!-- JS -->   
+        <!-- JS -->   
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- google platform library -->   
+	    <script src="https://apis.google.com/js/platform.js" async defer></script>   
+	    <meta name="google-signin-client_id" content="477442066838-v6vnfge4mi2bd6rv02jhbufolh5riqsj.apps.googleusercontent.com">
+		<!-- added by hussell to get profile info with google login api -->   
+	    <script src="assets/js/lawfirmsinsa-ggloginapi.js"></script>   
 
 	</head>
 	<body>
@@ -64,8 +68,9 @@
 			                <div class="custom-control custom-checkbox mb-3">
 			                  <input type="checkbox" class="custom-control-input" id="customCheck1">
 			                  <label class="custom-control-label" for="customCheck1">Remember password</label>
+			                </div>			                
+		                	  <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button> 
 			                </div>
-			                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
 			                <div class="text-center">
 			                  <a class="small" href="#">Forgot password?</a></div>
 			              </form>
@@ -76,7 +81,6 @@
 			    </div>
 			  </div>
 			</div>
-
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -100,7 +104,7 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script>			
 
 	</body>
 </html>

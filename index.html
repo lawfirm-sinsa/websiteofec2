@@ -13,10 +13,24 @@
 		<link rel="stylesheet" href="assets/css/lawfirmsinsa.css" />
         <!-- google font -->
 	    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
-	        <!-- JS -->   
+	      <!-- JS -->   
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+        <!-- google platform library -->   
+      <script src="https://apis.google.com/js/platform.js" async defer></script>   
+      <meta name="google-signin-client_id" content="477442066838-v6vnfge4mi2bd6rv02jhbufolh5riqsj.apps.googleusercontent.com">
+        <!-- added by hussell to get profile info with google login api -->   
+      <script>
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+      </script>   
+
 	</head>
 	<body>
 
@@ -32,7 +46,7 @@
 						<a class="rightMenu" href="#">중소기업 법률자문센터</a>
 						<a class="rightMenu" href="#">법률상담 게시판</a>
 						<a class="rightMenu" href="#">|</a>
-						<a class="rightMenu" href="login.html">로그인</a>
+						<a class="rightMenu" href="#" data-onsuccess="onSignIn">로그인</a>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
